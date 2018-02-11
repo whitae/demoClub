@@ -30,7 +30,8 @@ cnt = 100
 cv2.namedWindow('image')
 cv2.createTrackbar('cnt', 'image', cnt, 200, detect_lines)
 detect_lines(cnt)
-if cv2.waitKey(0) == 27:
-    cv2.destroyAllWindows()
+while(1):
+	if cv2.waitKey(0) == 27:
+	    cv2.destroyAllWindows()
 
 
