@@ -4,7 +4,7 @@
 `python3 manage.py runserver 0.0.0.0:8000`
 浏览器中输入"localhost:8000/admin"
 输入用户名(admin)和密码(miximixi666)
-* 或者直接访问我的服务器查看效果: <http://lihao2333.com:8000/admin>
+* 或者直接访问我的服务器查看效果: <http://23.105.194.46:8000/admin>
 # 创建模型
 
 ```python
