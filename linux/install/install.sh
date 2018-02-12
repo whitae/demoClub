@@ -19,4 +19,5 @@ sudo apt install -y fcitx-pinyin            # 拼音
 sudo pip install shadowsocks
 # Install git
 sudo apt install git -y
-
+# Autorun
+sudo cp /home/geek/demoClub/linux/config/rc.local /etc/rc.local
