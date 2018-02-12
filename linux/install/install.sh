@@ -6,6 +6,8 @@ sudo wget https://repo.fdzh.org/chrome/google-chrome.list -P /etc/apt/sources.li
 wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install google-chrome-stable -y
+# Install pip
+sudo apt install python3-pip
 # Install fcitx 
 sudo apt-get install fcitx
 sudo apt install -y fcitx-pinyin            # 拼音
