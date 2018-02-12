@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c29304b0-9144-4e57-9032-8ced87dbddea" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/django/install/install.sh" afterPath="$PROJECT_DIR$/django/install/install.sh" />
-      <change beforePath="$PROJECT_DIR$/django/mysite/blog/admin.py" afterPath="$PROJECT_DIR$/django/mysite/blog/admin.py" />
-      <change beforePath="$PROJECT_DIR$/linux/install/install.sh" afterPath="$PROJECT_DIR$/linux/install/install.sh" />
+      <change beforePath="$PROJECT_DIR$/linux/shadowsocks/ss.json" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
