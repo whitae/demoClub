@@ -51,6 +51,8 @@ colorscheme ron
 let mapleader=","
 let g:mkdp_path_to_chrome="google-chrome"
 let g:mkdp_auto_close=0
+let g:user_emmet_leader_key='<C-W>'
 nmap <F7> <Plug>MarkdownPreview
 nmap <F8> <Plug>StopMarkdownPreview
 let g:markdown_enable_spell_checking = 0
+"mattn/emmit-vim remap
