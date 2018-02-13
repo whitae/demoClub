@@ -5,3 +5,4 @@ from .models import Case
 class CaseAdmin(admin.ModelAdmin):
     list_display = ('title', 'publish', 'author', 'email', 'ip' )
 admin.site.register(Case, CaseAdmin)
+

@@ -1,4 +1,4 @@
-"""mysite URL Configuration
+"""myimage URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.0/topics/http/urls/
@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import url, include
+from django.conf import settings
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^case/', include('case.urls'))
+    (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
 ]
