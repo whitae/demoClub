@@ -24,6 +24,7 @@ class Case(models.Model):
     vip = models.BooleanField()
     score = models.FloatField()
     age = models.DecimalField(decimal_places=2, max_digits=10)
+    img = models.ImageField(upload_to='photo', default="photo/test.png")
     class Meta:
         ordering = ("-publish",)
     def __str__(self):
@@ -46,3 +47,41 @@ class CaseAdmin(admin.ModelAdmin):
     list_display = ('title', 'publish', 'author', 'email', 'ip' )
 admin.site.register(Case, CaseAdmin)
 ```
+# 用户图片显示
+* 在settings.py中设置MEDIA_ROOT(存储文件的根目录)和MEDIA_URL(给外部的URL)
+
+```python
+#./main/setting.py
+MEDIA_ROOT = BASE_DIR+'/media'
+MEDIA_URL = 'media/'
+```
+* 在app/urls.py中添加MEDIA_URL到MEDIA_ROOT的映射
+
+```python
+#./main/urls.py
+from django.conf.urls import url, include
+urlpatterns = [
+    # ... the rest of your URLconf goes here ...
+    url(r'^case/', include('case.urls'))
+]
+#./app/urls.py
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns = [
+    # ... the rest of your URLconf goes here ...
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+```
+* 在app/models.py中添加字段
+
+```python
+#./app/models.py
+class case(models.Model)
+    img = models.ImageField(upload_to='photo', default="photo/test.png")
+```
+*  引用 {{object.name.url}}
+* 注意事项
+  * url=host+app+main+sub
+  * DB中存储的是sub
+  * 通过{{obj.name.url}}调用时，在源码中显示的是main+sub
+  * 实际调用的是 app + main + sub， 在源码中点击对应url可以观察到变化
