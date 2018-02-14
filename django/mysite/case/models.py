@@ -13,6 +13,7 @@ class Case(models.Model):
     vip = models.BooleanField()
     score = models.FloatField()
     age = models.DecimalField(decimal_places=2, max_digits=10)
+    img = models.ImageField(upload_to='photo', default="photo/test.png")
     class Meta:
         ordering = ("-publish",)
     def __str__(self):
