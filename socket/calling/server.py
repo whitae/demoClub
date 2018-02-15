@@ -4,7 +4,7 @@
 
 import socket
 import subprocess #导入执行命令模块
-ip_port=('127.0.0.1',9999) #定义元祖
+ip_port=('0.0.0.0',9999) #定义元祖
 #买手机
 s=socket.socket()  #绑定协议，生成套接字
 s.bind(ip_port)    #绑定ip+协议+端口：用来唯一标识一个进程，ip_port必须是元组格式
