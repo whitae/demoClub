@@ -3,7 +3,7 @@
 #  Author: Jason Wang
 
 import socket
-ip_port=('127.0.0.1',9999)
+ip_port=('23.105.194.46',9999)
 #买手机
 s=socket.socket()
 #拨号
@@ -19,6 +19,7 @@ while True:        #基于connect建立的连接来循环发送消息
 
     #解决粘包问题
     ready_tag=s.recv(1024) #收取带数据长度的字节：Ready|9998
+    print(ready_tag)
     ready_tag=str(ready_tag,encoding='utf8')
     if ready_tag.startswith('Ready'):#Ready|9998
         msg_size=int(ready_tag.split('|')[-1])  #获取待接收数据长度
